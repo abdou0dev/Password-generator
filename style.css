@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content {
+    max-width: 550px;
+    background: #1F2937;
+    margin: 25px auto;
+    padding: 70px;
+    border-radius: 15px;
+}
+
+h1 {
+    max-width: 430px;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+span {
+    color: #4ADF86;
+}
+
+.statement {
+    color: var(--medium-grey, #D5D4D8);
+    font-size: 20px;
+    
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+img {
+    width: 13%;
+    
+}
+
+button {
+    display: flex;
+    padding: 9px 17px 9px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 6px;
+    border: none;
+    background: #10B981;
+
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 24px;
+}
+
+hr {
+    margin: 50px 0;
+    color: #2F3E53;
+}
+
+.passwords-container {
+    display: flex;
+    
+    
+}
+
+.password-el {
+    background: #273549;
+    width: 240px;
+    padding: 11px;
+    border-radius: 6px;
+    margin-right: 24px;
+    color: #10B981;
+    text-align: center;
+    transition-duration: 0.5s;
+    
+}
+
+.password-el:hover {
+    color: #fff;
+    background: black;
+}
+
+#click-to-copy {
+    color: var(--medium-grey, #D5D4D8);
+    font-size: 20px;
+    
+}
