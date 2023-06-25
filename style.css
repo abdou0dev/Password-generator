@@ -55,6 +55,18 @@ button {
     line-height: 24px;
 }
 
+input {
+    width: 230px;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #0b0e13;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
 hr {
     margin: 50px 0;
     color: #2F3E53;

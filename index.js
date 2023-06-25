@@ -10,7 +10,8 @@ const characters = [
     '%', '&', '*', '(', ')', '_', '-', '+', '='
 ]
 
-let passwordLength = 10
+
+
 
 let randomIndex = ""
 let generatedPassword = false
@@ -20,12 +21,22 @@ let passwordEl = document.getElementById("password1-el")
 let password2El = document.getElementById("password2-el")
 let password3El = document.getElementById("password3-el")
 let password4El = document.getElementById("password4-el")
+let passwordLengthEl = document.getElementById("password-length-el")
+let copiedEl = document.getElementById("copied-to-clipboard")
+
+let passwordLength = 0
 
 function generate() {
     generatedPassword = true
     clickEl.textContent = "Click a password to copy"
+    passwordLength = passwordLengthEl.value
 
-    if (randomIndex === "") {
+    randomIndex = 0
+    passwordEl.textContent = ""
+    password2El.textContent = ""
+    password3El.textContent = ""
+    password4El.textContent = ""
+
         for ( let i = 0; i< passwordLength; i++) {
             randomIndex = Math.floor(Math.random() * characters.length)
             passwordEl.textContent += characters[randomIndex]
@@ -40,7 +51,7 @@ function generate() {
             password4El.textContent += characters[randomIndex]
         }
 
-    }
+    
 
 }
 
@@ -48,7 +59,7 @@ passwordEl.addEventListener("click", function() {
     if (generatedPassword) {
         let textToCopy = this.textContent
         navigator.clipboard.writeText(textToCopy)
-        passwordEl.textContent = "Copied to clipboard"
+        copiedEl.textContent = "Copied to clipboard"
 
     }
 })
@@ -56,7 +67,7 @@ password2El.addEventListener("click", function() {
     if (generatedPassword) {
         let textToCopy = this.textContent
         navigator.clipboard.writeText(textToCopy)
-        password2El.textContent = "Copied to clipboard"
+        copiedEl.textContent = "Copied to clipboard"
         
     }
 })
@@ -64,7 +75,7 @@ password3El.addEventListener("click", function() {
     if (generatedPassword) {
         let textToCopy = this.textContent
         navigator.clipboard.writeText(textToCopy)
-        password3El.textContent = "Copied to clipboard"
+        copiedEl.textContent = "Copied to clipboard"
         
     }
 })
@@ -72,7 +83,7 @@ password4El.addEventListener("click", function() {
     if (generatedPassword) {
         let textToCopy = this.textContent
         navigator.clipboard.writeText(textToCopy)
-        password4El.textContent = "Copied to clipboard"
+        copiedEl.textContent = "Copied to clipboard"
         
     }
 })
